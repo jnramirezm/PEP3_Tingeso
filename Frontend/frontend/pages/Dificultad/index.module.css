@@ -1,0 +1,18 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+}
+
+.superior {
+    height: 80px;
+}
+
+.inferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(30vh - 80px);
+}
+
