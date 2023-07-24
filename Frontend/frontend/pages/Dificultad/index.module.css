@@ -1,18 +1,121 @@
-.main {
+.main{
     width: 100vw;
-    height: 100vh;
-    background-image: url("/images/background.jpg");
-    background-size: cover;
-}
-
-.superior {
-    height: 80px;
-}
-
-.inferior {
+    height: calc(100vh - 80px);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(30vh - 80px);
 }
 
+.background{
+    width: 100%;
+    height: calc(100vh - 80px);
+    opacity: 0.3;   
+    z-index: -1;
+    position: absolute;
+}
+
+.hutao{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 40%;
+    position: relative;
+}
+
+
+.hutao img{
+    height: 90%;
+    position: absolute;
+    left: 0;
+    bottom: 0;;
+}
+
+.hutao div{
+    height: 100%;
+    width: 10%;
+}
+
+
+
+.dificultades{
+    border-left: 20px groove #84514D;
+    height: 100%;
+    width: calc(100vh - 80px);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    
+
+}
+
+.dificultades div {
+    align-items: center;
+    display: flex;
+
+
+
+}
+
+.dificultad{
+    display: flex;
+    justify-content: flex-start;
+    }
+
+
+.imagenBox{
+    height: 80%;
+    margin-left: 20%;
+    width: fit-content;
+    
+
+}
+
+.imagenBox img {
+    height: 60%;
+}
+
+
+.basica{
+    position: relative;
+    grid-row: 1/2;
+}
+
+.basica:hover{
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  transform: translateY(-5px);
+
+}
+
+.intermedia{
+    position: relative;
+    grid-row: 2/3;
+}
+
+.intermedia:hover{
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  transform: translateY(-5px);
+
+}
+
+.avanzada{
+    position: relative;
+    grid-row: 3/4;
+}
+
+.avanzada:hover{
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  transform: translateY(-5px);
+
+}
+
+.prueba{
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    z-index: 3;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

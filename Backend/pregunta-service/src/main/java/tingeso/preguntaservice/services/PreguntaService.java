@@ -12,11 +12,12 @@ import java.util.List;
 public class PreguntaService {
     @Autowired
     private PreguntaRepository preguntaRepository;
-    public String guardarPregunta(String dificultad, String codigo, String respuesta){
+    public String guardarPregunta(String dificultad, String codigo, String respuesta, String enunciado){
         PreguntaEntity nPregunta = new PreguntaEntity();
         nPregunta.setDificultad(dificultad);
         nPregunta.setCodigo(codigo);
         nPregunta.setRespuesta(respuesta);
+        nPregunta.setEnunciado(enunciado);
         preguntaRepository.save(nPregunta);
         return "Se cargo el proveedor con exito";
 

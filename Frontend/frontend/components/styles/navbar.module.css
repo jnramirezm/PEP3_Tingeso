@@ -1,17 +1,18 @@
 .nav {
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    top: 0;
+    width: 100vw;
     height: 80px; 
     background-color: rgb(39, 39, 39);
     display: flex;
     border-bottom: 2px solid white;
+    z-index: 1;
+    justify-content: center
+
 }
 
 .left {
-    flex-grow: 1;
-    flex-basis: 0;
-    display: flex;
-    align-items: center;
+    width: 156px;
 }
 
 .center {
@@ -24,17 +25,19 @@
 
 .center img {
     height: 90%;
+    
 }
 
 .right{
-    flex-grow: 1;
-    flex-basis: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
-.right img{
+.img{
+    height: 90%;
+    top: 0;
+    right: 0;
+}
+
+.butao{
     height: 200%;
     position: absolute;
     top: 0;
@@ -44,13 +47,13 @@
 .footer{
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 50px;
-    display: flex;
     justify-content: center;
     background-color:  rgb(39, 39, 39);
     align-items: center;
     border-top: 2px solid white;
+    z-index: 1;
 }
 
 .left img{
@@ -58,6 +61,5 @@
     position: absolute;
     bottom: 0;
     left: 0;
-
 }
 

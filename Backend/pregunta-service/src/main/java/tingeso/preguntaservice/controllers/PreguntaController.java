@@ -16,10 +16,11 @@ public class PreguntaController {
     private PreguntaService preguntaService;
 
     @PostMapping
-    private ResponseEntity preguntaUpload(@RequestParam("dificultad") String dificultad,
-                                           @RequestParam("codigo") String codigo,
-                                           @RequestParam("respuesta") String respuesta){
-        preguntaService.guardarPregunta(dificultad, codigo, respuesta);
+    private ResponseEntity preguntaUpload ( @RequestParam("dificultad") String dificultad,
+                                            @RequestParam("codigo") String codigo,
+                                            @RequestParam("respuesta") String respuesta,
+                                            @RequestParam("enunciado") String enunciado){
+        preguntaService.guardarPregunta(dificultad, codigo, respuesta, enunciado);
         return ResponseEntity.ok().build();
     }
 

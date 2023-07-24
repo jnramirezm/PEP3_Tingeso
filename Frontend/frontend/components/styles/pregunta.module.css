@@ -1,0 +1,38 @@
+.pregunta {
+    width: 30vw;
+    height: 30vh;
+}
+
+.div{
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.cronometro{
+    height: 50%;
+    width: 50%;
+}
+
+.divResultado{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    gap: 10%;
+}
+
+.div input{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.div p{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+
+}

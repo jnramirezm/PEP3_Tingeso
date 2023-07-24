@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "oregunta")
+@Table(name = "pregunta")
 @Entity
 public class PreguntaEntity {
     @Id
@@ -18,4 +18,5 @@ public class PreguntaEntity {
     private String dificultad;
     private String codigo;
     private String respuesta;
+    private String enunciado;
 }

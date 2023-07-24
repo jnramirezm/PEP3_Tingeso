@@ -1,0 +1,34 @@
+.cronometro {
+    position: sticky  ;
+      font-size: 2rem;
+      font-weight: bold;
+      min-width: 15rem;
+      text-align: center;
+    }
+
+.titulo{
+  position: relative;
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tictac{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 10px solid #84514D;
+  border-top: #84514D;
+}
+
+.taoCronometro{
+  position: inherit;
+  display: flex;
+  border: 10px solid #84514D;
+  border-top: #84514D;
+  border-right: #84514D;
+  border-left: #84514D;
+
+}
+

@@ -4,14 +4,12 @@ import Link from 'next/link'
 export default function index() {
   return (
     <nav className={Style.nav}>
-        <div className={Style.left}></div>
         <div className={Style.center}>
                 <Link href="/">Inicio</Link>
                 <img src="/images/logo.png" alt="logo" />
-                <Link href="/Dificultad">Dificultad</Link>
+                <Link href="/Agregar">Agregar</Link>
         </div>
-        <div className={Style.right}>
-        </div>
+          <img className={Style.butao} src="/images/butao.png" alt="futer" ></img>
     </nav>
   )
 }

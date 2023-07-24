@@ -11,7 +11,12 @@ import java.util.List;
 @Repository
 public interface PreguntaRepository extends JpaRepository<PreguntaEntity, Integer> {
 
-    @Query(value = "Select p from pregunta as p where p.dificultad = :dificultad order by random() limit 4", nativeQuery = true)
+    @Query(value = "Select p.id, p.codigo, p.dificultad, p.enunciado, p.respuesta" +
+            " from pregunta as p " +
+            "where p.dificultad = :dificultad" +
+            " order by random()"+
+            "limit 4",
+            nativeQuery = true)
     List<PreguntaEntity> getPreguntasbyDificultad(@Param("dificultad")String dificultad);
 
 }
