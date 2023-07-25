@@ -29,17 +29,26 @@
 .form .file{
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #c4abab;
     border-radius: 5px;
 }
 
 .form .input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #c4abab;
     border-radius: 5px;
     background-color: transparent;
 }
+
+.form .inputD {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c4abab;
+    border-radius: 5px;
+    background-color: rgb(77, 27, 27);
+}
+
 
 .form .btn {
     margin-top: 5%;

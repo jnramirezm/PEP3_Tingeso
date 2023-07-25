@@ -36,3 +36,45 @@
     font-size: 20px;
 
 }
+
+.divBotones{
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    gap: 10%;
+    margin-top: 1rem;
+}
+
+
+.boton{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-weight: 0;
+    font-size: 16px;
+    width: 8rem;
+    height: 50px;
+    color: #fff;
+    background-color: #ad5656;
+    padding: 10px 30px;
+    border: 2px solid rgb(194, 58, 58);
+    border-radius: 50px;
+    transition : 1000ms;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .boton:disabled {
+    background-color: #7a3c3c; /* Un tono más oscuro */
+    cursor: not-allowed; /* Cambia el cursor para indicar que está deshabilitado */
+  }
+.boton:hover{
+    scale: transitionY(5px);
+}
+
+
+.colorIncorrecto{
+    color: red;
+}
+

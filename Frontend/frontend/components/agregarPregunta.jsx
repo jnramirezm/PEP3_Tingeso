@@ -57,7 +57,7 @@ export default function index() {
             </div>
             <div className="mb-3">
                 <label htmlFor="dificultad" className={Style.label}>Dificultad</label>
-                <select id="dificultad" name="dificultad" className={Style.input} value={pregunta.dificultad} onChange={handleChange}>
+                <select id="dificultad" name="dificultad" className={Style.inputD} value={pregunta.dificultad} onChange={handleChange}>
                     <option value="">Seleccione</option>
                     <option value="Basico">Basico</option>
                     <option value="Intermedio">Intermedio</option>

@@ -14,11 +14,23 @@
 
 .hutao{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     height: 100%;
     width: 40%;
     position: relative;
+    align-items: center;
 }
+
+.tituloIzq{
+    text-align: center;
+    font-size: 8rem;
+    color: #dcdcdc ; /* Cambia esto por el color que prefieras. */
+    font-weight: bold; /* Hace que el texto sea más grueso. */
+    text-shadow: 2px 2px  black; /* Añade una sombra roja al texto. */
+    transition: color 5s; /* Añade una transición suave al cambiar el color. */
+    font-family: 'Cursive', 'Arial', serif;
+
+  }
 
 
 .hutao img{
@@ -66,8 +78,6 @@
     height: 80%;
     margin-left: 20%;
     width: fit-content;
-    
-
 }
 
 .imagenBox img {

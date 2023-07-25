@@ -17,7 +17,7 @@ export default function index() {
         <main className={style.main}>
             <img className = {style.background} src = "/images/background.jpg"  />
         <section className={style.hutao}>
-                   <img className = {style.taoHD} src = "/images/locuratao.png" />
+                   <h1 className = {style.tituloIzq}>SELECCIONE <br></br>DIFICULTAD</h1>
             <div/>
         </section>
         <section className={style.dificultades}>

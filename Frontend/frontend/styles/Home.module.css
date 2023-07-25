@@ -1,10 +1,14 @@
 .container {
-  padding: 0 2rem;
+  width: 50%; /* O lo que necesites para controlar el tamaño del contenedor de contenido */
 }
 
 .main {
   width: 100vw;
   height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .background {
@@ -37,6 +41,13 @@
   align-items: center;
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.tao{
+  position: absolute;
+  height: 90%;
+  left: 0;
+  top: 10%;
 }
 
 /*
@@ -117,6 +128,11 @@ cursor: pointer;
 
 
 .boton1:hover{
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  transform: translateY(-5px);
+}
+
+.boton2:hover{
   box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
   transform: translateY(-5px);
 }

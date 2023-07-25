@@ -50,7 +50,7 @@
     font-weight: bold;
     font-weight: 0;
     font-size: 16px;
-    width: 200px;
+    width: 8rem;
     height: 50px;
     color: #fff;
     background-color: #ad5656;
@@ -63,5 +63,14 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.boton a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
 }
 

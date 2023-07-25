@@ -32,8 +32,11 @@ const [final, setFinal] = useState([])
 const [respuestasCorrectas, setRespuestasCorrectas] = useState([])
 const [respuestasIncorrectas, setRespuestasIncorrectas] = useState([])
 
+const [terminado, setTerminado] = useState(false)
+
 
  
+
 const handleInputChange = (event, index) => {
   setAnswers([...answers, [index, event.target.value]])
   console.log(answers)
@@ -61,6 +64,11 @@ const handleInputChange = (event, index) => {
     })
   }, [d])
 
+  useEffect(() => {
+    setTerminado(localStorage.getItem("terminado"))
+    console.log("terminado", terminado)
+  }, [terminado])
+
 
   function name(params) {
     let valores_x = {};
@@ -83,8 +91,9 @@ const handleInputChange = (event, index) => {
         valores_x[x] = valor; // Esto sobrescribirá cualquier valor anterior de x
     }
 
+
     let pares = Object.entries(valores_x);
-    console.log(pares);
+    console.log("pares: ", pares);
 
       /* Comparar preguntas.id con answer[0] */
       /* Si son iguales, comparar preguntas.respuesta con answer[1] */
@@ -112,13 +121,19 @@ const handleInputChange = (event, index) => {
 
       /* 4 - 1   7/4 */
 
+      const noContestadas = preguntas.length - answers.length
+
       const puntajeCorrectas = respuestasCorrectas.length * 7
-      const puntajeIncorrectas = respuestasIncorrectas.length * 1
+      const puntajeIncorrectas = respuestasIncorrectas.length * 1 + noContestadas 
+
+
+
       const puntaje = puntajeCorrectas + puntajeIncorrectas
       const promedio = puntaje / preguntas.length
 
       localStorage.setItem("puntaje", puntaje)
       localStorage.setItem("promedio", promedio)
+      localStorage.setItem("terminado", true)
 
     }
   }, [verCorreccion, answers, preguntas])
@@ -145,13 +160,15 @@ const handleInputChange = (event, index) => {
             placeholder= {finishedLoadingAndShow ? pregunta.respuesta : "Escriba su respuesta"}
             onChange={(event) => handleInputChange(event, pregunta.id)} // handleInputChange is a function you would need to implement to handle the change in input value.
              />
-             { finishedLoadingAndShow && respuestasCorrectas.includes(pregunta.id)  &&  <p>holupe</p>}
-             { finishedLoadingAndShow && respuestasIncorrectas.includes(pregunta.id)  &&  <p>malardo</p>}
+             { finishedLoadingAndShow  && respuestasCorrectas.includes(pregunta.id)  &&  <p> Correcto!</p>}
+             { finishedLoadingAndShow  && respuestasIncorrectas.includes(pregunta.id)  &&  <p className={Style.colorIncorrecto}> Incorrecto! Respuesta correcta: {pregunta.respuesta} </p>}
             </div>
           </div>
         )}
-        <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 0}> Anterior</button>
-        <button onClick={() => setCurrentPage(currentPage + 1)} disabled={(currentPage + 1) * 2 >= preguntas.length}> Siguiente </button>
+        <div className = {Style.divBotones}>
+       <button className = {Style.boton} onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 0}> Anterior</button>
+        <button className = {Style.boton} onClick={() => setCurrentPage(currentPage + 1)} disabled={(currentPage + 1) * 2 >= preguntas.length}> Siguiente </button>
+        </div>
       </div>
     
   );
